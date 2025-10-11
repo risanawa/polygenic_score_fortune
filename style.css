@@ -1,7 +1,7 @@
 /* General Body Styling */
 body {
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to bottom right, #1a0f2e, #3a2b5a); /* Dark mystical gradient */
+    background: linear-gradient(to bottom right, #1a0f2e, #3a2b5a); 
     color: #e0e0e0; /* Light grey text */
     display: flex;
     justify-content: center;
@@ -22,15 +22,15 @@ body {
     text-align: center;
     max-width: 800px;
     width: 100%;
-    margin-top: 50px; /* Space from the top */
-    margin-bottom: 50px; /* Space from the bottom */
+    margin-top: 50px;
+    margin-bottom: 50px; 
 }
 
 /* Headings */
 h1 {
-    font-family: 'Creepster', cursive; /* Spooky font for main title */
-    font-size: 3em;
-    color: #ffcc00; /* Goldish yellow */
+    font-family: 'Creepster', cursive;
+    font-size: 2.5em;
+    color: #ffcc00; 
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
 }
@@ -135,7 +135,7 @@ button:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Courier New', monospace; /* Monospaced font for code-like details */
+    font-family: 'Courier New', monospace; 
 }
 
 #genotypeList li strong {
@@ -155,16 +155,16 @@ button:active {
 .final-score {
     font-size: 1.8em;
     font-weight: bold;
-    color: #ff66b2; /* Pinkish-purple for final score */
+    color: #ff66b2; 
     margin-top: 25px;
     margin-bottom: 25px;
     text-align: center;
-    /* text-shadow: 0 0 10px rgba(255, 102, 178, 0.7); */
+    text-shadow: 0 0 10px rgba(255, 102, 178, 0.7);
 }
 
 .final-score span {
     font-family: 'Creepster', cursive;
-    font-size: 1.2em; /* Make the number slightly larger */
+    font-size: 1.2em; 
 }
 
 .fortune-text {
@@ -208,7 +208,6 @@ footer {
     color: #777;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5em;

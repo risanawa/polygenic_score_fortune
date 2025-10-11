@@ -1,5 +1,4 @@
-// --- 1. FAKE GWAS DATA ---
-// Same data as in the Python script, now in a JavaScript object
+// 1. FAKE GWAS DATA 
 const gwasSummaryStats = {
     "rs671": { "effect": 0.35, "trait": "coffee craving" },
     "rs122910": { "effect": 0.21, "trait": "caffeine metabolism" },
@@ -7,7 +6,7 @@ const gwasSummaryStats = {
     "rs2472297": { "effect": 0.45, "trait": "positive caffeine buzz" }
 };
 
-// --- 2. GET REFERENCES TO HTML ELEMENTS ---
+// 2. GET REFERENCES TO HTML ELEMENTS
 const revealFortuneBtn = document.getElementById('revealFortuneBtn');
 const resultsDiv = document.getElementById('results');
 const genotypeList = document.getElementById('genotypeList');
@@ -16,12 +15,11 @@ const finalPGSSpan = document.getElementById('finalPGS');
 const fortuneMessageP = document.getElementById('fortuneMessage');
 const resetBtn = document.getElementById('resetBtn');
 
-// --- 3. EVENT LISTENERS ---
+// 3. EVENT LISTENERS
 revealFortuneBtn.addEventListener('click', calculateFortune);
 resetBtn.addEventListener('click', resetFortune);
 
-// --- 4. FUNCTIONS ---
-
+// 4. FUNCTIONS
 function calculateFortune() {
     // Hide the reveal button and show results container
     revealFortuneBtn.classList.add('hidden');
