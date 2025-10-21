@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             calculationStepsList.appendChild(listItem);
             
             // For the full formula display
-            calculationSteps.push(`(${genotype} &times; ${effect.toFixed(2)})`);
+            calculationSteps.push(`(${genotype} * ${effect.toFixed(2)})`);
         }
 
         // Display results
