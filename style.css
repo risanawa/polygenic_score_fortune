@@ -1,199 +1,226 @@
 /* General Body Styling */
 body {
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to bottom right, #1a0f2e, #3a2b5a); 
-    color: #e0e0e0; /* Light grey text */
+    background: #f0f2f5; /* Light grey background */
+    color: #333; /* Dark text for readability */
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align to the top to allow scrolling */
-    min-height: 100vh; /* Minimum height of the viewport */
+    align-items: flex-start;
+    min-height: 100vh;
     margin: 0;
-    padding: 20px; /* Padding around the content */
-    box-sizing: border-box; /* Include padding in element's total width and height */
-    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Container for all content */
 .container {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 0 30px rgba(128, 0, 128, 0.7); /* Purple glowing shadow */
+    background-color: #ffffff; /* White card */
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 1400px;
+    max-width: 800px;
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px; 
+    margin-top: 40px;
+    margin-bottom: 40px; 
 }
 
 /* Headings */
 h1 {
-    font-family: 'Creepster', cursive;
-    font-size: 3.5em;
-    color: #ffcc00; 
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5em;
+    color: #1a2a6c; /* Deep blue */
+    margin-bottom: 15px;
 }
 
 h2 {
-    font-family: 'Creepster', cursive;
-    font-size: 2.5em;
-    color: #ff9900; /* Orange-gold */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8em;
+    color: #333;
     margin-top: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
 }
 
 h3 {
-    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    color: #1a2a6c;
     margin-top: 20px;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
     padding-bottom: 5px;
     margin-bottom: 15px;
+    text-align: left;
 }
 
-
-/* Intro paragraph */
-.intro {
+/* Intro and instruction text */
+.intro, .instructions {
     font-size: 1.1em;
     line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+.instructions {
+    font-size: 1em;
+    color: #666;
     margin-bottom: 30px;
-    color: #c0c0c0;
 }
 
-/* Fortune Card styling */
-.fortune-card {
-    background-color: rgba(30, 0, 40, 0.8); /* Darker, slightly purple card */
+/* Main Calculator Card */
+.calculator-card {
+    background-color: #fafafa;
     border-radius: 10px;
     padding: 25px;
     margin-top: 20px;
-    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* SNP Input Styling */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.input-group label {
+    text-align: left;
+    flex-grow: 1;
+}
+.input-group label strong {
+    font-family: 'Roboto Mono', monospace;
+    color: #0056b3;
+}
+.input-group .trait-desc {
+    font-size: 0.85em;
+    color: #777;
+    display: block;
+}
+.input-group input {
+    width: 60px;
+    padding: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Button Styling */
 button {
-    background: linear-gradient(to right, #8e2de2, #4a00e0); /* Purple gradient */
+    background: linear-gradient(to right, #1a2a6c, #2e44a2); /* Blue gradient */
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 30px;
+    padding: 14px 28px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     margin-top: 20px;
-    margin-bottom: 20px;
 }
-
 button:hover {
-    background: linear-gradient(to right, #a752e5, #6a2ceb);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-
-button:active {
-    transform: translateY(0);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+#resetBtn {
+     background: linear-gradient(to right, #6c757d, #495057);
 }
 
 /* Results section styling */
 #results {
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background for results */
-    padding: 20px;
-    border-radius: 8px;
     margin-top: 25px;
-    text-align: left; /* Align text left within results */
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+    text-align: left;
 }
-
-#results p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
 .calculation-section {
-    background-color: rgba(50, 0, 70, 0.7);
-    border-left: 5px solid #ff9900;
-    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #1a2a6c;
+    padding: 15px 20px;
     margin: 20px 0;
     border-radius: 5px;
 }
-
-#genotypeList {
-    list-style-type: none; /* No bullet points */
+#calculationStepsList {
+    list-style-type: none;
     padding: 0;
     margin-top: 10px;
-    color: #a0a0a0;
 }
-
-#genotypeList li {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 8px 12px;
+#calculationStepsList li {
+    padding: 8px 0;
     margin-bottom: 5px;
-    border-radius: 3px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Courier New', monospace; 
+    font-family: 'Roboto Mono', monospace; 
+    border-bottom: 1px solid #eee;
 }
-
-#genotypeList li strong {
-    color: #ffcc00; /* Highlight SNP names */
+#calculationStepsList li:last-child {
+    border-bottom: none;
 }
 
 .math-formula {
-    font-family: 'Courier New', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 1.1em;
-    background-color: #222;
-    padding: 10px;
+    background-color: #e9ecef;
+    padding: 15px;
     border-radius: 5px;
     margin-top: 10px;
     word-break: break-all; 
+    color: #333;
 }
 
 .final-score {
     font-size: 1.8em;
     font-weight: bold;
-    color: #ff66b2; 
-    margin-top: 25px;
-    margin-bottom: 25px;
+    color: #1a2a6c; 
+    margin: 25px 0;
     text-align: center;
-    /* text-shadow: 0 0 10px rgba(255, 102, 178, 0.7); */
+    background-color: #e9f5ff;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .final-score span {
-    font-family: 'Creepster', cursive;
+    font-family: 'Roboto Mono', monospace;
     font-size: 1.2em; 
 }
 
-.fortune-text {
-    font-size: 1.4em;
-    font-style: italic;
-    color: #fff;
+.interpretation-text {
+    font-size: 1.1em;
+    color: #333;
     margin-bottom: 30px;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 /* Disclaimer box */
 .limitation-box {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid #ffcc00;
-    padding: 15px;
+    background-color: #fff3cd; /* Light yellow */
+    border: 1px solid #ffeeba;
+    padding: 20px;
     border-radius: 8px;
     margin-top: 30px;
-    font-size: 0.9em;
-    color: #a0a0a0;
+    font-size: 0.95em;
+    color: #856404; /* Dark yellow text */
     text-align: left;
 }
-
 .limitation-box h3 {
-    color: #ffcc00;
+    color: #856404;
     text-align: center;
-    border-bottom: 1px dashed rgba(255, 204, 0, 0.5);
-    padding-bottom: 8px;
+    border-bottom: none;
+    padding-bottom: 0;
     margin-bottom: 10px;
+}
+.limitation-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.limitation-box li {
+    margin-bottom: 8px;
 }
 
 /* Utility class to hide elements */
@@ -201,33 +228,20 @@ button:active {
     display: none;
 }
 
-/* Footer Styling */
-footer {
-    margin-top: 40px;
-    font-size: 0.85em;
-    color: #777;
-}
-
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5em;
-    }
-    h2 {
-        font-size: 1.5em;
-    }
-    button {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-    .final-score {
-        font-size: 1.4em;
-    }
-    .fortune-text {
-        font-size: 1.2em;
-    }
     .container {
         padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .input-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .input-group input {
+        margin-top: 8px;
+        width: 100%;
+        box-sizing: border-box;
     }
 }

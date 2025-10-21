@@ -3,53 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔮 Polygenic Score Fortune Teller 🔮</title>
-    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>🧬 Polygenic Score Calculator 🧬</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>🔮 Polygenic Score Fortune Teller 🔮</h1>
-        <p class="intro">Curious about your genetic predisposition for coffee drinking?</p>
-        <p class="intro">Check out your polygenic score fortune!</p>
+        <h1>🧬 Polygenic Score Calculator 🧬</h1>
+        <p class="intro">
+            This tool demonstrates how a Polygenic Score (PGS) is calculated.
+            A PGS summarizes the estimated effect of many genetic variants on an individual's phenotype.
+        </p>
 
-        <div class="fortune-card">
-            <h2>Your Genetic Destiny Awaits...</h2>
-            <button id="revealFortuneBtn">Reveal My Coffee Destiny!</button>
+        <div class="calculator-card">
+            <h2>Enter Your Genotype</h2>
+            <p class="instructions">For each SNP below, enter the number of "risk" alleles you have (0, 1, or 2).</p>
+            
+            <div id="snpInputsContainer">
+                <!-- SNP inputs will be dynamically generated here by JavaScript -->
+            </div>
+            
+            <button id="calculateBtn">Calculate My Score</button>
+            <button id="resetBtn" class="hidden">Reset Calculator</button>
             
             <div id="results" class="hidden">
-                <p>Analyzing your ancient genetic code...</p>
                 <div class="calculation-section">
-                    <h3>Your Genotypes & Contributions:</h3>
-                    <ul id="genotypeList">
-                        </ul>
-                    <p><strong>Calculating total Polygenic Score (PGS)...</strong></p>
+                    <h3>Your Genotype Contributions:</h3>
+                    <ul id="calculationStepsList">
+                        <!-- Calculation breakdown will appear here -->
+                    </ul>
+                    <p><strong>Total Polygenic Score (PGS) Formula:</strong></p>
                     <p id="pgsCalculation" class="math-formula"></p>
                 </div>
                 
-                <p class="final-score">✨ Your final Polygenic Score is: <span id="finalPGS"></span> ✨</p>
-                <p id="fortuneMessage" class="fortune-text"></p>
+                <p class="final-score">🔬 Your final Polygenic Score is: <span id="finalPGS"></span> 🔬</p>
+                <p id="interpretationMessage" class="interpretation-text"></p>
+                
                 <div class="limitation-box">
-                    <h3>📜 The Fortune Teller's Disclaimer 📜</h3>
-                    <p>This score is for entertainment and educational purposes only! 
-                        A real PGS only explains a small fraction of why people differ in a trait and is NOT deterministic. 
-                        Your environment, lifestyle, and free will matter most! Enjoy your coffee just the way you like it.</p>
-                    <h3>🚨 LIMITATIONS 🚨</h3>
-                    <p>
-                        Limited Predictive Power:
-                    </p>
-                    <p>
-                        A real PRS for a complex trait explains a VERY SMALL amount of the total difference between people. 
-                        It is as low as 2% to 11% for major disorders. 
-                    </p>
-                    <p>
-                        Ancestry Bias: 
-                    </p>
-                    <p>
-                        The PRS is most accurate for people of European ancestry. Most "discovery GWAS" are in European populations, and thus,
-                        the scores are population-specific and less accurate for non-European populations. 
-                    </p>
+                    <h3>🚨 Important Limitations of Polygenic Scores</h3>
+                    <p><strong>This is an educational tool, not a real genetic test.</strong> Real-world Polygenic Scores have significant limitations:</p>
+                    <ul>
+                        <li><strong>Small Predictive Power:</strong> A PGS for a complex trait like coffee consumption explains a very small fraction of the differences between people. Lifestyle and environment are far more influential.</li>
+                        <li><strong>Ancestry Bias:</strong> This score is based on data primarily from individuals of European ancestry. Because of this, it is less accurate for people of other ancestries, which is a major challenge in genomics research.</li>
+                    </ul>
                 </div>
-                <button id="resetBtn" class="hidden">Ask Again!</button>
             </div>
         </div>
     </div>
