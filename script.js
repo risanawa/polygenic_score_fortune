@@ -1,9 +1,21 @@
-// 1. FAKE GWAS DATA 
+// Based on major GWAS meta-analyses (e.g., Coffee and Caffeine Genetics Consortium)
 const gwasSummaryStats = {
-    "rs671": { "effect": 0.35, "trait": "coffee craving" },
-    "rs122910": { "effect": 0.21, "trait": "caffeine metabolism" },
-    "rs4410790": { "effect": 0.15, "trait": "daytime sleepiness" },
-    "rs2472297": { "effect": 0.45, "trait": "positive caffeine buzz" }
+    "rs2472297": { 
+        "effect": 0.14, 
+        "trait": "Coffee consumption (cups/day, near CYP1A2 gene)" 
+    },
+    "rs4410790": { 
+        "effect": 0.12, 
+        "trait": "Coffee consumption (cups/day, near AHR gene)" 
+    },
+    "rs1260326": { 
+        "effect": 0.08, 
+        "trait": "Coffee consumption (cups/day, in GCKR gene)" 
+    },
+    "rs5751876": { 
+        "effect": -0.05, 
+        "trait": "Coffee consumption (cups/day, in ADORA2A gene)" 
+    }
 };
 
 // 2. GET REFERENCES TO HTML ELEMENTS
@@ -37,7 +49,7 @@ function calculateFortune() {
     const yourGenotypes = {}; // Store generated genotypes for display
 
     // Simulate a loading delay
-    resultsDiv.querySelector('p').textContent = "Analyzing your ancient genetic code...";
+    resultsDiv.querySelector('p').textContent = "Analyzing your genetic code...";
     setTimeout(() => {
         resultsDiv.querySelector('p').textContent = "Generating your unique genetic profile...";
         
@@ -69,12 +81,14 @@ function calculateFortune() {
             
             // Determine and display fortune message
             let fortuneText = "";
-            if (polygenicScore < 1.0) {
-                fortuneText = "'Decaf, please.' You are genetically predisposed to enjoy coffee sparingly.";
-            } else if (polygenicScore < 2.0) {
-                fortuneText = "'A cup a day keeps the yawns away.' You likely enjoy a regular, balanced coffee routine.";
+
+            // *** THESE THRESHOLDS ARE UPDATED FOR THE REAL BETAS ***
+            if (polygenicScore < 0.20) {
+                fortuneText = "'Decaf, please.' Your genetics suggest you're sensitive to caffeine or don't metabolize it quickly. You likely enjoy coffee sparingly.";
+            } else if (polygenicScore < 0.40) {
+                fortuneText = "'A cup a day keeps the yawns away.' Your genetic profile is typical of a regular, balanced coffee drinker.";
             } else {
-                fortuneText = "'An IV of espresso!' You likely keep baristas very, very busy.";
+                fortuneText = "'An IV of espresso!' Your genetics (fast metabolism, low anxiety) are perfect for keeping baristas very, very busy.";
             }
             fortuneMessageP.textContent = fortuneText;
 
