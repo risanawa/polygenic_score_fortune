@@ -4,19 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const gwasSummaryStats = {
         "rs2472297": {
             "effect": 0.14,
-            "trait": "Caffeine Metabolism (near CYP1A2). <br> This gene codes for the primary enzyme that breaks down caffeine."
+            "trait": "Caffeine Metabolism (near CYP1A2). This gene codes for the primary enzyme that breaks down caffeine."
         },
         "rs4410790": {
             "effect": -0.10,
-            "trait": "Metabolism Regulation (near AHR). <br> This gene helps regulate the activity of metabolism enzymes like CYP1A2."
+            "trait": "Metabolism Regulation (near AHR). This gene helps regulate the activity of metabolism enzymes like CYP1A2."
         },
         "rs1260326": {
             "effect": -0.04,
-            "trait": "Caffeine Reward (in GCKR). <br> Linked to glucose/lipid metabolism and may influence caffeine's rewarding effects."
+            "trait": "Caffeine Reward (in GCKR). Linked to glucose/lipid metabolism and may influence caffeine's rewarding effects."
         },
         "rs5751876": {
             "effect": -0.05,
-            "trait": "Caffeine Sensitivity (in ADORA2A). <br> Codes for the adenosine receptor that caffeine blocks; linked to anxiety effects."
+            "trait": "Caffeine Sensitivity (in ADORA2A). Codes for the adenosine receptor that caffeine blocks; linked to anxiety effects."
         }
     };
 
@@ -39,9 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             inputGroup.className = 'input-group';
 
             const label = document.createElement('label');
-            label.setAttribute('for', `snp-${snp}`);
-            label.innerHTML = `<strong>${snp}</strong> <span class="trait-desc">(${data.trait})</span>`;
-            
+            label.htmlFor = `snp-${snp}`;
+            // Add a <br> tag after the SNP ID to force a line break
+            label.innerHTML = `<strong>${snp}</strong> <br> <span>(${data.trait})</span>`;
+
             const input = document.createElement('input');
             input.type = 'number';
             input.id = `snp-${snp}`;
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsDiv.classList.remove('hidden');
         resetBtn.classList.remove('hidden');
 
-        pgsCalculationDisplay.textContent = `PGS = ${calculationSteps.join(' + ')}`;
+        pgsCalculationDisplay.innerHTML = `PGS = ${calculationSteps.join(' + ')}`;
         finalPGSSpan.textContent = polygenicScore.toFixed(3);
         
         // Determine and display interpretation message
@@ -127,5 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial setup
     createInputs();
 });
+
 
 
