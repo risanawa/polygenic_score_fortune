@@ -4,19 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const gwasSummaryStats = {
         "rs2472297": {
             "effect": 0.14,
-            "trait": "Caffeine Metabolism (near CYP1A2). This gene codes for the primary enzyme that breaks down caffeine."
+            "trait": "<strong>Caffeine Metabolism (near CYP1A2):</strong> <br>This gene codes for the primary enzyme that breaks down caffeine."
         },
         "rs4410790": {
             "effect": -0.10,
-            "trait": "Metabolism Regulation (near AHR). This gene helps regulate the activity of metabolism enzymes like CYP1A2."
+            "trait": "<strong>Metabolism Regulation (near AHR):</strong> <br>This gene helps regulate the activity of metabolism enzymes like CYP1A2."
         },
         "rs1260326": {
             "effect": -0.04,
-            "trait": "Caffeine Reward (in GCKR). Linked to glucose/lipid metabolism and may influence caffeine's rewarding effects."
+            "trait": "<strong>Caffeine Reward (in GCKR):</strong> <br>Linked to glucose/lipid metabolism and may influence caffeine's rewarding effects."
         },
         "rs5751876": {
             "effect": -0.05,
-            "trait": "Caffeine Sensitivity (in ADORA2A). Codes for the adenosine receptor that caffeine blocks; linked to anxiety effects."
+            "trait": "<strong>Caffeine Sensitivity (in ADORA2A):</strong> <br>Codes for the adenosine receptor that caffeine blocks; linked to anxiety effects."
         }
     };
 
