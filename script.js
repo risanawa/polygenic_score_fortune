@@ -1,21 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. FAKE GWAS DATA (Based on real studies)
+    // 1. GWAS DATA from Cornelis et al., 2015, Molecular Psychiatry (Table 1)
+    // Descriptions synthesized from PMID: 38898144
     const gwasSummaryStats = {
-        "rs2472297": { 
-            "effect": 0.14, 
-            "trait": "Coffee consumption (cups/day, near CYP1A2 gene)" 
+        "rs2472297": {
+            "effect": 0.14,
+            "trait": "Caffeine Metabolism (near CYP1A2). This gene codes for the primary enzyme that breaks down caffeine."
         },
-        "rs4410790": { 
-            "effect": 0.12, 
-            "trait": "Coffee consumption (cups/day, near AHR gene)" 
+        "rs4410790": {
+            "effect": -0.10,
+            "trait": "Metabolism Regulation (near AHR). This gene helps regulate the activity of metabolism enzymes like CYP1A2."
         },
-        "rs1260326": { 
-            "effect": 0.08, 
-            "trait": "Coffee consumption (cups/day, in GCKR gene)" 
+        "rs1260326": {
+            "effect": -0.04,
+            "trait": "Caffeine Reward (in GCKR). Linked to glucose/lipid metabolism and may influence caffeine's rewarding effects."
         },
-        "rs5751876": { 
-            "effect": -0.05, 
-            "trait": "Coffee consumption (cups/day, in ADORA2A gene)" 
+        "rs5751876": {
+            "effect": -0.05,
+            "trait": "Caffeine Sensitivity (in ADORA2A). Codes for the adenosine receptor that caffeine blocks; linked to anxiety effects."
         }
     };
 
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             calculationStepsList.appendChild(listItem);
             
             // For the full formula display
-            calculationSteps.push(`(${genotype} * ${effect.toFixed(2)})`);
+            calculationSteps.push(`(${genotype} &times; ${effect.toFixed(2)})`);
         }
 
         // Display results
@@ -97,12 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Determine and display interpretation message
         let interpretationText = "";
-        if (polygenicScore < 0.20) {
-            interpretationText = "This score is on the lower end, suggesting a genetic predisposition toward lower coffee consumption, possibly due to higher sensitivity or slower metabolism.";
-        } else if (polygenicScore < 0.40) {
-            interpretationText = "This score is in a typical range, consistent with a genetic predisposition for average coffee consumption.";
+        if (polygenicScore < 0.0) {
+            interpretationText = "This negative score suggests a genetic predisposition toward lower coffee consumption. This could be influenced by variants linked to slower metabolism or higher sensitivity.";
+        } else if (polygenicScore < 0.20) {
+            interpretationText = "This score is in a lower-to-typical range, consistent with a genetic predisposition for average or slightly below-average coffee consumption.";
         } else {
-            interpretationText = "This score is on the higher end, suggesting a genetic predisposition toward higher coffee consumption, possibly due to faster caffeine metabolism or lower sensitivity.";
+            interpretationText = "This score is on the higher end, suggesting a genetic predisposition toward higher coffee consumption, likely driven by the `rs2472297` variant associated with faster metabolism.";
         }
         interpretationMessageP.textContent = interpretationText;
     }
@@ -126,3 +127,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial setup
     createInputs();
 });
+
+
