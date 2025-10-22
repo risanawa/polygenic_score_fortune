@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const label = document.createElement('label');
             label.htmlFor = `snp-${snp}`;
             // Add a <br> tag after the SNP ID to force a line break
-            label.innerHTML = `<strong>${snp}</strong> <br> <span>(${data.trait})</span>`;
+            label.innerHTML = `<strong>${snp}</strong> <br> <span>${data.trait}</span>`;
 
             const input = document.createElement('input');
             input.type = 'number';
