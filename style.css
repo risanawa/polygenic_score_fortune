@@ -187,12 +187,12 @@ button {
 }
 
 .interpretation-text {
+    background-color: #e9f5ff;
     font-size: 1.1em;
     color: #333;
     margin-bottom: 30px;
     text-align: center;
     line-height: 1.6;
-    background-color: #e9f5ff;
     padding: 15px;
     border-radius: 8px;
 }
