@@ -140,8 +140,8 @@ button {
     text-align: left;
 }
 .calculation-section {
-    background-color: #f8f9fa;
-    border-left: 5px solid #1a2a6c;
+    background-color: #99cbfd;
+    /* border-left: 5px solid #1a2a6c; */
     padding: 15px 20px;
     margin: 20px 0;
     border-radius: 5px;
