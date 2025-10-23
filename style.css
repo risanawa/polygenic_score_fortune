@@ -1,6 +1,6 @@
 /* General Body Styling */
 body {
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     background: #f0f2f5; /* Light grey background */
     color: #333; /* Dark text for readability */
     display: flex;
@@ -110,7 +110,7 @@ h3 {
 
 /* Button Styling */
 button {
-    background: linear-gradient(to right, #1a2a6c, #2e44a2); /* Blue gradient */
+    background: rgb(147, 187, 222);
     color: white;
     border: none;
     padding: 14px 28px;
