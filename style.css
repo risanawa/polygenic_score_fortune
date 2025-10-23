@@ -117,9 +117,7 @@ button {
   border-radius: 14px;
   font-weight: bold;
   font-size: 16px;
-
   border: 0;
-
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
