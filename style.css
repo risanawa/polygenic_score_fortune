@@ -27,14 +27,14 @@ body {
 
 /* Headings */
 h1 {
-    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Roboto Mono', monospace; */
     font-size: 2.0em;
     color: #1a2a6c; /* Deep blue */
     margin-bottom: 15px;
 }
 
 h2 {
-    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Roboto Mono', monospace; */
     font-size: 1.8em;
     color: #333;
     margin-top: 25px;
@@ -44,7 +44,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Roboto Mono', monospace; */
     color: #1a2a6c;
     margin-top: 20px;
     padding-bottom: 5px;
@@ -110,7 +110,7 @@ h3 {
 
 /* Button Styling */
 button {
-    background: rgb(147, 187, 222);
+    background: rgb(120, 190, 252);
     color: white;
     border: none;
     padding: 14px 28px;
@@ -129,7 +129,7 @@ button:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 #resetBtn {
-     background: linear-gradient(to right, #6c757d, #495057);
+     background: rgb(254, 128, 128)
 }
 
 /* Results section styling */
