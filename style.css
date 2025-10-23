@@ -110,7 +110,7 @@ h3 {
 
 /* Button Styling */
 button {
-    background: rgb(120, 190, 252);
+    background: rgb(94, 179, 253);
     color: white;
     border: none;
     padding: 14px 28px;
@@ -129,7 +129,7 @@ button:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 #resetBtn {
-     background: rgb(254, 128, 128)
+     background: rgb(255, 99, 99)
 }
 
 /* Results section styling */
